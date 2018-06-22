@@ -894,6 +894,11 @@ namespace util_tests {
 /// Stream tests : http://nodejs.org/api/stream.html
 ////////////////////////////////////////////////////
 
+function stream_readable_subclass() {
+    class CustomReadable extends stream.Readable<{ foo: number }> {}
+    new CustomReadable();
+}
+
 // http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options
 function stream_readable_pipe_test() {
     var rs = fs.createReadStream(Buffer.from('file.txt'));

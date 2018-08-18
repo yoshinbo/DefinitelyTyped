@@ -15,7 +15,7 @@ type HammerOptionsWithRecognizers = Omit<HammerOptions, 'recognizers'> & {
 
 declare namespace ReactHammer {
     interface ReactHammerProps {
-        direction?: number;
+        direction?: string;
         options?: HammerOptionsWithRecognizers;
         recognizeWith?: { [gesture: string]: Recognizer | string };
         vertical?: boolean;
